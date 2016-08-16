@@ -26,9 +26,5 @@ cm=c;
 }
 }
 System.out.println(res);
-
 }
-
-
-
 }
