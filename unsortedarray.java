@@ -10,7 +10,7 @@ public static void main(String[] args)
     arr[i]=sc.nextInt();
   Arrays.sort(arr);
     for(int i=0;i<n-1;i++)
-       if(!arr[i]==arr[i+1])
+       if(arr[i]!=arr[i+1])
        {
           System.out.println(arr[i+1]);
           break;
