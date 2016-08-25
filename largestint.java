@@ -24,7 +24,7 @@ public static void main(String[] args)
      }
      int val=a.length()%3;
      int count=0;
-     String final="";
+     String fin="";
      String sb="";
      String as="";
      sb+=(a.substring(0,val)+",");
@@ -34,7 +34,7 @@ public static void main(String[] args)
        {
           as+=a.charAt(i);
           count++;
-          final=as;
+          fin=as;
        }
        else
        {
@@ -43,10 +43,10 @@ public static void main(String[] args)
          as="";
          i--;
        }
-       sb+=final;
+     }
+       sb+=fin;
        System.out.println(sb);
      }
     }
-  }
   
   
