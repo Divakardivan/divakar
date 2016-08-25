@@ -12,7 +12,7 @@ public static void main(String[] args)
   for(int i=0;i<s.length();i++)
   {
     ch+=s.charAt(i);
-    int val=Integer.ParseInt(ch);
+    int val=Integer.parseInt(ch);
     while(val>0)
     {
       int temp=val%10;
