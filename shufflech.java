@@ -4,31 +4,25 @@ class shufflech
 public static void main(String[] args)
 {
  Scanner sc=new Scanner(System.in);
- StringBuffer s=new StringBuffer(sc.next());
- String str="";
- for(int i=0;i<s.length()-1;i++)
+ String s=sc.next();
+ char[] str=s.toCharArray();
+ boolean a=true;
+ for(int i=0;i<str.length-1;i++)
  {
-   for(int j=i+1;j<s.length();j++)
-   {
-     if(s.charAt(i)!=s.charAt(j))
+   for(int j=i+1;j<str.length;j++)
+     if(str[i]!=str[j])
      {
-        str+=s.charAt(i)+"";
-        break;
+       char c=str[i+1];
+       str[i+1]=str[j];
+       str[j]=c;
      }
+ }
+ for(int i=0;i<str.length-1;i++)
+   if(str[i]==str[i+1])
+   {
+        a=false;
+        break;
    }
- }
- boolean a=false;
- if(s.length()==str.length())
- {
-   for(int i=0;i<str.length()-1;i++)
-      if(str.charAt(i)!=str.charAt(i+1))
-              a=true;
-      else
-      {
-             a=false;
-             break;
-      }
- }
  System.out.println(a);
 }
 }
